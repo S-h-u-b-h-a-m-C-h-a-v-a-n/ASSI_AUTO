@@ -1,0 +1,42 @@
+﻿@model IEnumerable<VendorApp.Models.Vendor>
+
+@{
+    ViewData["Title"] = "Vendor List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Address Line 1</th>
+            <th>Address Line 2</th>
+            <th>Contact Email</th>
+            <th>Contact No</th>
+            <th>Valid Till Date</th>
+            <th>IsActive</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Code</td>
+                <td>@item.Name</td>
+                <th>@item.Address_Line_1</th>
+                <th>@item.Address_Line_2</th>
+                <th>@item.Contact_Email</th>
+                <th>@item.Contact_No</th>
+                <th>@item.Valid_Till_Date</th>
+                <th>@item.IsActive</th>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Create">Create New</a>
+</div>

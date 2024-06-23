@@ -1,0 +1,79 @@
+﻿@model VendorApp.Models.Vendor
+
+@{
+    ViewData["Title"] = "Create Vendor";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+    <table class="table table-striped">
+        <tr>
+    <div class="form-group">
+                <label class="form-control">Code</label>
+        <input asp-for="Code" class="form-control" style="width:200px" />
+        <span asp-validation-for="Code" class="text-danger"></span>
+    </div>
+        </tr>
+        <tr>
+    <div class="form-group">
+                <label class="form-control">Name</label>
+                <input asp-for="Name" class="form-control" style="width:450px" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+        </tr>
+        <tr>
+    <div class="form-group">
+                <label class="form-control">Address Line 1</label>
+                <input asp-for="Address_Line_1" class="form-control" style="width:450px" />
+        <span asp-validation-for="Address_Line_1" class="text-danger"></span>
+    </div>
+        </tr>
+        <tr>
+    <div class="form-group">
+                <label class="form-control">Address Line 2</label>
+                <input asp-for="Address_Line_2" class="form-control" style="width:450px" />
+        <span asp-validation-for="Address_Line_2" class="text-danger"></span>
+    </div>
+        </tr>
+        <tr>
+    <div class="form-group">
+                <label class="form-control">Contact Email </label>
+                <input asp-for="Contact_Email" class="form-control" style="width:450px" />
+        <span asp-validation-for="Contact_Email" class="text-danger"></span>
+    </div>
+        </tr>
+        <tr>
+       <div class="form-group">
+                <label class="form-control">Contact Number </label>
+                <input asp-for="Contact_No" class="form-control" style="width:200px" />
+        <span asp-validation-for="Contact_No" class="text-danger"></span>
+    </div>
+        </tr>
+        <tr>
+    <div class="form-group">
+                <label class="form-control">Valid Till Date  </label>
+                <input asp-for="Valid_Till_Date" type="date" class="form-control" style="width:200px" />
+        <span asp-validation-for="Valid_Till_Date" class="text-danger"></span>
+    </div>
+        </tr>
+        <tr>
+    <div class="form-group">
+                <label class="form-control">  IsActive  </label>
+        <input asp-for="IsActive" type="checkbox" />
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+        </tr>
+        <tr>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+        </tr>
+
+    </table>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
